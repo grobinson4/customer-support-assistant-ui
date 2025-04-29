@@ -4,6 +4,7 @@ import { msalConfig } from "./auth/msalConfig";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LoginPage from "./pages/LoginPage";
 import DashboardPage from "./pages/DashboardPage";
+import AgentDashboardPage from "./pages/AgentDashboardPage";
 import ProtectedRoute from "./components/ProtectedRoute";
 import { useEffect, useState } from "react";
 
@@ -29,7 +30,8 @@ function AppWrapper() {
       <Router>
         <Routes>
           <Route path="/" element={<LoginPage />} />
-          <Route path="/dashboard" element={<ProtectedRoute><DashboardPage /></ProtectedRoute>} />
+          {/* <Route path="/dashboard" element={<ProtectedRoute><DashboardPage /></ProtectedRoute>} /> */}
+          <Route path="/agent" element={<ProtectedRoute><AgentDashboardPage /></ProtectedRoute>} />
         </Routes>
       </Router>
     </MsalProvider>

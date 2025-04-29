@@ -13,7 +13,7 @@ function LoginPage() {
 
   useEffect(() => {
     if (isAuthenticated) {
-      navigate("/dashboard");
+      navigate("/agent");
     }
   }, [isAuthenticated, navigate]);
 
